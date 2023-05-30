@@ -16,8 +16,6 @@ function playSound(e) {
   if (key) key.classList.add("playing");
 }
 function removeEffect(e) {
-  // console.log(e.propertyName);
-  if (e.propertyName !== "transform") return;
   this.classList.remove("playing");
 }
 
