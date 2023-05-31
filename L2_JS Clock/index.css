@@ -18,19 +18,24 @@ body {
 #outer-circle {
     position: relative;
     display: flex;
-    background: lightseagreen;
+    /* background: lightseagreen; */
     align-items: center;
     justify-content: center;
     border-radius: 50%;
     width: 250px;
     height: 250px;
+    /* Add Clock Image as the background */
+    background-image: url(./clock_img.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 /* create a circle using css */
 #circle {
     position: relative;
     display: flex;
-    background: lightblue;
+    /* background: lightblue; */
     border-radius: 50%;
     width: 200px;
     height: 200px;
@@ -42,19 +47,18 @@ body {
     width: 50%;
     top: 50%;
     border: 2px solid black;
-    /* justify-content: center;
-    align-items: center; */
-}
-
-/* hour hand */
-.second {
-    border-color: blue;
     /* Transform origin from rotate center to right corner */
     transform-origin: right;
     /* rotate  the div*/
     transform: rotate(90deg);
     /* for giving smooth transition effect */
     transition: all .05s;
+}
+
+/* hour hand */
+.second {
+    border-color: rgb(172, 15, 15);
+
     /* to add tick effect write on inspect transition - ease-in-out
     and click on icon and change graph to get 
     this cubic bezier function value */
@@ -65,22 +69,10 @@ body {
 
 .minute {
     margin-top: 0%;
-    border-color: blueviolet;
-
-    transform-origin: right;
-    /* rotate  the div*/
-    transform: rotate(90deg);
-    /* for giving smooth transition effect */
-    transition: all .05s;
+    border-color: rgb(238, 246, 20);
 }
 
 .hour {
     margin-top: 0%;
     border-color: rgb(20, 20, 20);
-
-    transform-origin: right;
-    /* rotate  the div*/
-    transform: rotate(90deg);
-    /* for giving smooth transition effect */
-    transition: all .05s;
 }
