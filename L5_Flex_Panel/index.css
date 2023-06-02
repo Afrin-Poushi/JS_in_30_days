@@ -1,0 +1,60 @@
+html,
+body {
+    height: 100vh;
+    /* overflow: hidden; */
+}
+
+/* All flexboxs */
+.boxs {
+    height: 100vh;
+    display: flex;
+    flex-wrap: wrap;
+    border: 3px solid violet;
+}
+
+/* individual boxs */
+.item {
+    border: 2px solid blue;
+    display: flex;
+    /* direction swap main and cross axis */
+    flex-direction: column;
+    flex: 1;
+    /* Align-item works on cross axis */
+    align-items: center;
+    /* justify works on main axis */
+    justify-content: space-between;
+    transition: transform 0.3s ease-in-out;
+}
+
+/* for middle text which will show first */
+.middleText {
+    font-size: 70px;
+}
+
+/* when hovering over a box that box will flex-grow */
+.hoverOn {
+    cursor: pointer;
+    flex: 3;
+    transform: scale(1.01);
+}
+
+/* initally hide other texts */
+.hiddenText {
+    visibility: hidden;
+}
+
+/* when hovering over effects on other text */
+.growText {
+    font-size: 40px;
+    visibility: visible;
+    transition: all .7s;
+}
+
+/* effect on top text which will change position on y axis by that value */
+.growText:first-child {
+    transform: translateY(70px);
+}
+
+.growText:last-child {
+    transform: translateY(-70px);
+}
