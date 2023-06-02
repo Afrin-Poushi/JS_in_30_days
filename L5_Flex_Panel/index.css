@@ -1,7 +1,12 @@
 html,
 body {
     height: 100vh;
+    /* Chop off the margin of page */
+    margin: 0;
     /* overflow: hidden; */
+    box-sizing: border-box;
+    font-family: 'Sofia', "sans-serif";
+    font-weight: 200;
 }
 
 /* All flexboxs */
@@ -9,7 +14,8 @@ body {
     height: 100vh;
     display: flex;
     flex-wrap: wrap;
-    border: 3px solid violet;
+    overflow: hidden;
+    /* border: 3px solid violet; */
 }
 
 /* individual boxs */
@@ -23,13 +29,15 @@ body {
     align-items: center;
     /* justify works on main axis */
     justify-content: space-between;
-    transition: transform 0.3s ease-in-out;
+    transition: font-size .7s, transform 0.3s ease-in-out;
 }
 
 /* for middle text which will show first */
 .middleText {
     font-size: 70px;
 }
+
+/* or .item span:nth-child(2){ fontsize} */
 
 /* when hovering over a box that box will flex-grow */
 .hoverOn {
