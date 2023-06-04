@@ -41,6 +41,8 @@ function displayMatches(e) {
       const cityName = place.city;
       const stateName = place.state;
 
+      /**$1 is the first group from your regular expression,
+       * $2 is the second, Groups are defined by brackets */
       // Highlight matching part in city name, g means global, i means case insensitive
       const highlightedCity = cityName.replace(
         new RegExp(`(${userInput})`, "gi"),
