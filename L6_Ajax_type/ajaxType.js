@@ -25,39 +25,48 @@ function searchCities(wordToMatch, cities) {
 }
 const showResult = document.querySelector(".showResult");
 
-function displayCities(userInput) {
+function displayMatches(e) {
   /**Clear previous List */
   showResult.innerHTML = "";
+  const userInput = this.value;
   /** get matched item in the array */
-  matchedCities = searchCities(this.value, cities);
+  matchedCities = searchCities(userInput, cities);
   //   console.log(...matchedCities);
 
   /** When there is no input or erased the input value */
-  if (this.value.trim() === "") {
-    showResult.innerHTML = "type city or state name";
+  if (userInput.trim() === "") {
+    showResult.innerHTML = "";
   } else {
     matchedCities.forEach((place) => {
+      const cityName = place.city;
+      const stateName = place.state;
+
+      // Highlight matching part in city name, g means global, i means case insensitive
+      const highlightedCity = cityName.replace(
+        new RegExp(`(${userInput})`, "gi"),
+        `<span class='highlight'>$1</span>`
+      );
+
+      // Highlight matching part in state name
+      const highlightedState = stateName.replace(
+        new RegExp(`(${userInput})`, "gi"),
+        "<span class='highlight'>$1</span>"
+      );
+
       const list = document.createElement("li");
       list.classList.add("places");
-      list.textContent = `${place.city}, ${place.state} ${place.population}`;
+      list.innerHTML = `${highlightedCity}, ${highlightedState} `;
+      const span = document.createElement("span");
+      span.classList.add("population");
+      span.textContent = place.population;
+      list.appendChild(span);
       showResult.appendChild(list);
-    });
-
-    const html = matchedCities.map((place) => {
-      return `
-      <li><span class="name">${place.city}, ${place.state} </span></li>
-      `;
     });
   }
 }
 
 const inputField = document.querySelector(".inputField");
 /** every time write a value and put the cursor out of input*/
-inputField.addEventListener("change", displayCities);
+inputField.addEventListener("change", displayMatches);
 /** gets each value with the same writing time (keyboard key up)*/
-inputField.addEventListener("keyup", displayCities);
-
-// setTimeout(() => {
-//   console.table(cities);
-// }, 2000);
-// console.log(cities);
+inputField.addEventListener("keyup", displayMatches);
