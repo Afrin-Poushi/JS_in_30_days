@@ -1,0 +1,39 @@
+html,
+body {
+    height: 100vh;
+    /* overflow: hidden; */
+    box-sizing: border-box;
+}
+
+.content {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+input {
+    display: block;
+    width: fit-content;
+    margin: 10px 0;
+    padding: 10px;
+    border: 1px solid #aaa;
+
+}
+
+.inputField {
+    background-color: #ececec;
+    border: 0;
+    box-shadow: 0 0 4px rgba(0, 0, 0, 0.3);
+    transition: .3s box-shadow;
+}
+
+.inputField:hover {
+    box-shadow: 0 0 4px rgba(0, 0, 0, 0.5);
+}
+
+/*  every matched list item */
+li {
+    list-style: none;
+}
