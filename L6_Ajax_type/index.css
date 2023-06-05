@@ -6,6 +6,7 @@ body {
     font-family: Montserrat, sans-serif;
 }
 
+/*  move the all content middle of page  */
 .content {
     height: 100vh;
     display: flex;
