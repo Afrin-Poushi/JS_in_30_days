@@ -20,6 +20,10 @@ body {
     flex-direction: column;
 }
 
+input[type="checkbox"] {
+    margin: 12px;
+}
+
 .item {
     display: flex;
     margin: 1px 0;
@@ -31,6 +35,13 @@ body {
     box-sizing: border-box;
 }
 
-.itemChecked {
+
+input[type="checkbox"]:checked+p {
+
     text-decoration: line-through;
+
 }
+
+/* .itemChecked {
+    text-decoration: line-through;
+} */

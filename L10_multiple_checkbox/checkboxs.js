@@ -8,6 +8,18 @@ items.push(...checkboxs);
 
 function handleCheckboxChange(item, e) {
   const box = e.target;
+  // let inBetween = false;
+  // console.log(this.checked);
+
+  // if (shiftKeyPressed === true && this.checked) {
+  //   checkboxs.forEach((checkbox) => {
+  //     if (checkbox === this || checkbox === lastCheckedBox) {
+  //       inBetween = !inBetween;
+  //       console.log("started to check in between");
+  //     }
+
+  //     if (inBetween) checkbox.checked = true;
+  //   });
 
   if (shiftKeyPressed) {
     const allBoxs = Array.from(
@@ -27,19 +39,18 @@ function handleCheckboxChange(item, e) {
     allBoxs.slice(start, end + 1).forEach((checkbox) => {
       checkbox.checked = true;
 
-      const parentDiv = checkbox.parentElement;
-      const text = parentDiv.querySelector("p");
-      text.classList.add("itemChecked");
+      // const parentDiv = checkbox.parentElement;
+      // const text = parentDiv.querySelector("p");
+      // text.classList.add("itemChecked");
     });
-
-    lastCheckedBox = box;
   }
+  lastCheckedBox = box;
 
-  const text = item.querySelector("p");
-  const isChecked = box.checked;
-  isChecked
-    ? text.classList.add("itemChecked")
-    : text.classList.remove("itemChecked");
+  // const text = item.querySelector("p");
+  // const isChecked = box.checked;
+  // isChecked
+  //   ? text.classList.add("itemChecked")
+  //   : text.classList.remove("itemChecked");
 }
 
 items.forEach((item) =>
