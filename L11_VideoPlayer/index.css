@@ -1,0 +1,113 @@
+:root {
+    --videoWidth: 70%;
+    --space: calc((100% - 76.5%) / 2);
+}
+
+
+html,
+body {
+    height: 100vh;
+    /* overflow: hidden; */
+    margin: 0;
+    font-family: Montserrat, sans-serif;
+    /* background-color: darkslategrey; */
+}
+
+.content {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.player {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    position: relative;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.video-div {
+    display: flex;
+    height: var(--videoWidth);
+    width: min-content;
+    position: relative;
+}
+
+.controls {
+    background-color: antiquewhite;
+    display: flex;
+    position: absolute;
+    width: 100%;
+    top: calc(var(--space) + var(--videoWidth));
+    /* bottom: var(--space); */
+}
+
+.controls[data-state="hidden"] {
+    display: none;
+}
+
+.controls[data-state="visible"] {
+    display: flex;
+}
+
+/* .controls button[data-state="play"] {
+    background-image: url("https://icons8.com/icon/6JY5zZtJducA/play-button");
+}
+
+.controls button[data-state="pause"] {
+    background-image: url("http://www.slatecube.com/images/pause-btn.png");
+} */
+
+/*  select the direct child of controls class */
+.controls>* {
+    float: left;
+    width: min-content;
+    height: 100%;
+
+}
+
+.controls>*:first-child {
+    margin-left: 0;
+}
+
+/* Progress Bar */
+.controls .progress {
+    cursor: pointer;
+    width: 100%;
+}
+
+.controls progress {
+    display: block;
+    width: 100%;
+    margin-top: 0.125rem;
+    border: none;
+    appearance: none;
+    color: #0da8f6 !important;
+    border-radius: 2px;
+
+}
+
+.controls progress span {
+    width: 0%;
+    height: 100%;
+    /* display: inline-block; */
+    background-color: #88b3d6 !important;
+}
+
+/* All buttons */
+.controls button {
+    border: none;
+    cursor: pointer;
+    background: transparent;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.controls button:hover,
+.controls button:focus {
+    opacity: 0.5;
+}

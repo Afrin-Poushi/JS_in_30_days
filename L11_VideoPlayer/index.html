@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Video Player</title>
+    <!-- style css -->
+    <link rel="stylesheet" type="text/css" href="index.css">
+
+</head>
+
+<body>
+    <div class="content">
+        <div class="player">
+            <!-- Controls attribute show controls in the video -->
+            <video class="video-div" id="videoPlayer" src="valorant.mp4" controls></video>
+
+
+            <div id="video-controls" class="controls" data-state="hidden">
+
+                <button type="button" class="playPause" data-state="play">Play/Pause</button>
+
+                <div class="progress">
+                    <progress id="progress" value="0" min="0">
+                        <span class="progress-bar"></span>
+                    </progress>
+                </div>
+
+                <button type="button" class="volInc" data-state="volup">Vol+</button>
+                <button type="button" class="volDec" data-state="voldown">Vol-</button>
+                <button type="button" class="mute" data-state="mute">Mute/Unmute</button>
+
+
+            </div>
+        </div>
+    </div>
+
+    <script src="videoPlayer.js"></script>
+</body>
+
+</html>
