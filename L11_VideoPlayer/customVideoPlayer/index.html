@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Video Player</title>
+    <!-- style css -->
+    <link rel="stylesheet" type="text/css" href="index.css">
+
+</head>
+
+<body>
+    <div class="content">
+        <div class="player">
+            <!-- Controls attribute show controls in the video -->
+            <video class="video-div" id="videoPlayer" src="../VALORANT.mp4"></video>
+
+
+            <div id="video-controls" class="controls" data-state="hidden">
+                <!-- progress bar -->
+                <div class="progress">
+                    <div class="progress-bar"></div>
+                </div>
+
+                <!-- Play pause btn -->
+                <button type="button" class="playPause" data-state="play">Play</button>
+
+                <input type="range" name="volume" id="vol" class="play-controls" min="0" max="1" step=".05" value="1">
+                <input type="range" name="playbackRate" id="playRate" class="play-controls" min="0.5" max="2" step=".1"
+                    value="1">
+
+                <button type="button" class="play-rate" id="skip-backward" data-skip="-10">-10s</button>
+                <button type="button" class="play-rate" id="skip-backward" data-skip="25">+25s</button>
+                <!-- <button type="button" class="mute" data-state="mute">Mute/Unmute</button> -->
+            </div>
+        </div>
+    </div>
+
+    <script src="customVideoPlayer.js"></script>
+</body>
+
+</html>

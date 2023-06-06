@@ -1,0 +1,114 @@
+:root {
+    --videoWidth: 70%;
+    --space: calc((100% - 81%) / 2);
+}
+
+
+html,
+body {
+    height: 100vh;
+    /* overflow: hidden; */
+    margin: 0;
+    font-family: Montserrat, sans-serif;
+    /* background-color: darkslategrey; */
+}
+
+.content {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.player {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    position: relative;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.video-div {
+    display: flex;
+    height: var(--videoWidth);
+    width: min-content;
+    position: relative;
+}
+
+.controls {
+    /* background-color: antiquewhite; */
+    display: flex;
+    flex-wrap: wrap;
+    position: absolute;
+    width: 100%;
+    top: calc(var(--space) + var(--videoWidth));
+    background-color: rgb(181, 180, 180);
+    opacity: .8;
+    /* bottom: var(--space); */
+}
+
+.controls[data-state="hidden"] {
+    display: none;
+}
+
+.controls[data-state="visible"] {
+    display: flex;
+}
+
+
+/*  select the direct child of controls class */
+.controls>* {
+    float: left;
+    width: min-content;
+    height: 100%;
+    margin-right: 10px;
+}
+
+.controls>*:first-child {
+    margin: 5px 4px 4px 7px;
+    /* margin-left: 3px;
+    margin-right: 4px;
+    margin-bottom: 10px; */
+}
+
+/* Progress Bar */
+.controls .progress {
+    cursor: pointer;
+    width: 100%;
+    display: flex;
+    width: 100%;
+    border-radius: 2px;
+    background-color: black;
+    opacity: .6;
+}
+
+.progress-bar {
+    width: 100%;
+    background: #0da8f6;
+    height: 10px;
+    flex-basis: 0%;
+    transition: all .9s;
+}
+
+/* All buttons */
+.controls button {
+    border: none;
+    cursor: pointer;
+    background: transparent;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.controls button:hover,
+.controls button:focus {
+    opacity: 0.5;
+}
+
+
+.play-controls {
+    width: 350px;
+    display: flex;
+    float: left;
+}
