@@ -1,0 +1,35 @@
+html,
+body {
+    height: 100vh;
+    /* total height and width includes padding, border */
+    box-sizing: border-box;
+    margin: 0;
+    font-size: 16px;
+}
+
+
+/* make all items on the center of page */
+.content {
+    height: 100vh;
+    /* flex-direction: column;
+    justify-content: center;
+    align-items: center; */
+}
+
+#bands {
+    list-style: inside square;
+    background: white;
+    width: 400px;
+    margin: auto;
+    padding: 0;
+    box-shadow: 0 0 0 20px rgba(0, 0, 0, 0.05);
+}
+
+#bands li {
+    border-bottom: 1px solid #efefef;
+    padding: 20px;
+}
+
+#bands li:last-child {
+    border-bottom: 0;
+}
