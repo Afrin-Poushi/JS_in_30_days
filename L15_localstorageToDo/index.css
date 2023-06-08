@@ -1,0 +1,78 @@
+html,
+body {
+    height: 100vh;
+    /* total height and width includes padding, border */
+    box-sizing: border-box;
+    margin: 0;
+    font-size: 16px;
+    background-image: url(./assests/bg_cake.jpg);
+    background-repeat: no-repeat;
+    background-size: auto;
+}
+
+
+/* make all items on the center of page */
+.content {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.list-form {
+    position: relative;
+    padding: 20px;
+    background-color: beige;
+    border-radius: 7px;
+
+    box-shadow: 10px 10px 17px #87898a
+}
+
+.list-form h2 {
+    display: flex;
+    justify-content: center;
+    font-weight: 500;
+    font-stretch: condensed;
+}
+
+li {
+    list-style: none;
+    font-size: 1.2rem;
+    width: fit-content;
+    padding: 4px;
+}
+
+
+input {
+    padding: 10px;
+    outline: none;
+    border-radius: 5px;
+    background-color: blanchedalmond;
+    border: none;
+}
+
+input[type="submit"] {
+    background-color: burlywood;
+    font-stretch: condensed;
+}
+
+
+
+input[type="checkbox"] {
+    display: none;
+}
+
+.item label {
+    cursor: pointer;
+}
+
+.item input:checked+label::before {
+    content: url(./assests/cake.png);
+}
+
+.item input+label::before {
+    display: inline;
+    content: url(./assests/check_box.png);
+    padding-right: 10px;
+}
