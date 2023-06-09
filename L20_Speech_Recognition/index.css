@@ -1,0 +1,84 @@
+html,
+body {
+    height: 100vh;
+    /* total height and width includes padding, border */
+    font-family: Arial, Helvetica, sans-serif;
+    box-sizing: border-box;
+    margin: 0;
+    font-size: 18px;
+
+}
+
+
+/* make all items on the center of page */
+.content {
+    height: 100vh;
+    /* display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; */
+}
+
+h1 {
+    margin: auto;
+    text-align: center;
+}
+
+button {
+    float: right;
+    width: 50px;
+    height: 50px;
+    outline: none;
+    border: none;
+    border-radius: 50%;
+    margin: 5px 8px 0 0;
+}
+
+.hint {
+    font-size: 17px;
+    padding-left: 10px;
+}
+
+.mic {
+    background-image: url(./assets/microphone.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    cursor: pointer;
+}
+
+.showResult {
+    background: rgb(254, 240, 219);
+    min-width: 600px;
+    max-width: min-content;
+    margin: auto;
+    padding: 10px;
+    box-shadow: 12px 8px 0 5px rgba(112, 66, 0, 0.08);
+
+    margin-top: 7px;
+}
+
+.showResult p {
+    padding: 8px;
+    padding-left: 15px;
+    border-bottom: 1px solid #aaa8a8;
+    margin: 10px;
+}
+
+
+.showResult p:last-child {
+    border-bottom: 0;
+}
+
+
+/* language dropdown */
+.lang {
+    float: right;
+    margin-right: 10px;
+    padding: 2px;
+    font-size: 17px;
+    background: rgb(254, 240, 219);
+    outline: none;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+}
