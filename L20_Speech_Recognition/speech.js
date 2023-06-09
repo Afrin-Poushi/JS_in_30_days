@@ -53,7 +53,6 @@ lang.addEventListener("change", changeLang);
  *  that contain individual recognized words. the second [0] returns
  * the SpeechRecognitionAlternative at position 0. */
 recognition.addEventListener("result", (e) => {
-  console.log(e);
   const transcript = Array.from(e.results)
     .map((result) => result[0])
     .map((result) => result.transcript)
@@ -61,12 +60,14 @@ recognition.addEventListener("result", (e) => {
   console.log(transcript);
   p.textContent = transcript;
 
+  /**If user audio gets stopped it will show next outputs on new paragraph */
   if (e.results[0].isFinal) {
     p = document.createElement("p");
     showResult.appendChild(p);
   }
 });
 
+/**after no audio it gets it will start again */
 recognition.addEventListener("end", recognition.start);
 
 console.log(recognition);
