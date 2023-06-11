@@ -1,0 +1,59 @@
+html,
+body {
+    height: 100vh;
+    /* total height and width includes padding, border */
+    box-sizing: border-box;
+    margin: 0;
+    font-size: 16px;
+    background-color: wheat;
+    /* z-index: -10; */
+}
+
+
+/* make all items on the center of page */
+.content {
+    height: 100vh;
+    position: relative;
+    /* flex-direction: column;
+    justify-content: center;
+    align-items: center; */
+    z-index: 5;
+
+}
+
+.nav-bar {
+    padding: 0;
+    margin: 0;
+}
+
+.highlightSpan {
+    display: inline-block;
+    position: relative;
+    padding: 2px;
+    background-color: azure;
+    z-index: -3;
+    transition: all .2s;
+    border-radius: 10px;
+
+}
+
+
+.options {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+li {
+    list-style: none;
+    /* padding: 10px; */
+}
+
+p {
+    line-height: 1.8rem;
+}
+
+a {
+    text-decoration: none;
+    /* padding: 4px; */
+    border-radius: 10px;
+}
