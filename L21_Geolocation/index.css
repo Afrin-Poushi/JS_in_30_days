@@ -1,0 +1,76 @@
+html,
+body {
+    height: 100vh;
+    /* total height and width includes padding, border */
+    box-sizing: border-box;
+    margin: 0;
+    font-size: 16px;
+}
+
+
+/* make all items on the center of page */
+.content {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.compass {
+    margin-top: 0;
+    min-height: 400px;
+    min-width: 400px;
+    background-image: url(./compass.png);
+    background-repeat: no-repeat;
+    background-size: auto;
+    /* transform: rotate(270deg); */
+}
+
+.speed {
+    font-size: 50px;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+}
+
+.unit {
+    font-size: 25px;
+}
+
+/* Button CSS */
+.startLocation {
+    margin-top: 20px;
+    align-items: center;
+    appearance: none;
+    background-color: #3EB2FD;
+    background-image: linear-gradient(1deg, #4F58FD, #149BF3 99%);
+    border-radius: 100px;
+    border-width: 0;
+    box-shadow: none;
+    box-sizing: border-box;
+    color: #FFFFFF;
+    cursor: pointer;
+    display: inline-flex;
+    font-family: CircularStd, sans-serif;
+    font-size: 1rem;
+    height: auto;
+    justify-content: center;
+    line-height: 1.5;
+    padding: 6px 20px;
+    position: relative;
+    text-align: center;
+    text-decoration: none;
+    transition: background-color .2s, background-position .2s;
+    white-space: nowrap;
+}
+
+.startLocation:active,
+.startLocation:focus {
+    outline: none;
+}
+
+.startLocation:hover {
+    background-image: linear-gradient(0deg, #777ef7, #149BF3 99%);
+
+}
