@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Countdown Clock</title>
+    <!-- style css -->
+    <link rel="stylesheet" type="text/css" href="index.css">
+    <!-- Make icon on website tab -->
+    <link rel="icon" type="image/x-icon" href="./clock_img.png" />
+
+</head>
+
+<body>
+    <div class="timer">
+        <div class="timer-controls">
+            <button type="button" data-time="20" class="timer-btn">20 Secs</button>
+            <button type="button" data-time="300" class="timer-btn">Work 5</button>
+            <button type="button" data-time="900" class="timer-btn">Quick 15</button>
+            <button type="button" data-time="1200" class="timer-btn">Snack 20</button>
+            <button type="button" data-time="3600" class="timer-btn">Lunch Break</button>
+
+            <form name="customTime"> <input type="text" name="mins" placeholder="Enter Minutes"></form>
+        </div>
+
+        <div class="time-display">
+            <h1 class="display-timeLeft"></h1>
+            <p class="display-timeEnd"></p>
+        </div>
+    </div>
+
+    <script src="countdownClock.js"></script>
+</body>
+
+</html>
