@@ -1,0 +1,103 @@
+html,
+body {
+    height: 100vh;
+    /* total height and width includes padding, border */
+    box-sizing: border-box;
+    margin: 0;
+    font-size: 16px;
+    font-family: cursive, sans-serif;
+
+}
+
+
+/* make all items on the center of page */
+.content {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.game {
+    display: flex;
+    width: 500px;
+    height: 500px;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-content: space-around;
+}
+
+.header {
+    text-transform: uppercase;
+
+}
+
+.score {
+
+    margin-left: 30px;
+    width: 2rem;
+}
+
+
+.hole {
+    /* background-color: thistle; */
+    width: 50px;
+    height: 70px;
+    position: relative;
+    flex: 1 0 33.33%;
+    /* overflow: hidden; */
+}
+
+.hole:after {
+    display: block;
+    background: url(hole.png) bottom center no-repeat;
+    background-size: cover;
+    content: '';
+    width: 100%;
+    height: 72px;
+    position: relative;
+    z-index: 2;
+    bottom: -52px;
+}
+
+.mole {
+    position: absolute;
+    background-color: mediumpurple;
+    width: 100%;
+    height: 100%;
+    top: 72%;
+
+    background: url('mole.png') bottom center no-repeat;
+    background-size: 56%;
+
+    transition: all 0.3s ease;
+}
+
+.hole.up .mole {
+    top: 0;
+}
+
+
+/* CSS fot start button*/
+.start-btn {
+    font-family: cursive, sans-serif;
+    font-size: 16px;
+
+    letter-spacing: 2px;
+    text-decoration: none;
+    text-transform: uppercase;
+    color: #000;
+    cursor: pointer;
+    border: 3px solid;
+    padding: 0.25em 0.5em;
+    box-shadow: 1px 1px 0px 0px, 2px 2px 0px 0px, 3px 3px 0px 0px, 4px 4px 0px 0px, 5px 5px 0px 0px;
+    position: relative;
+
+}
+
+.start-btn:hover {
+    box-shadow: 0px 0px 0px 0px;
+    top: 5px;
+    left: 5px;
+}
