@@ -1,0 +1,36 @@
+*,
+*::before,
+*::after {
+    margin: 0;
+    box-sizing: inherit;
+}
+
+html,
+body {
+    height: 100vh;
+    /* total height and width includes padding, border */
+    box-sizing: border-box;
+    margin: 0;
+    font-family: sans-serif;
+    font-size: 16px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+div {
+    width: 100%;
+    padding: 70px;
+}
+
+.one {
+    background-color: thistle;
+}
+
+.two {
+    background-color: lavender;
+}
+
+.three {
+    background-color: coral;
+}
