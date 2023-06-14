@@ -1,0 +1,51 @@
+* {
+    margin: 0;
+}
+
+html,
+body {
+    height: 100vh;
+    position: relative;
+    display: flex;
+    overflow-y: hidden;
+    overflow-x: hidden;
+    align-items: center;
+}
+
+.items {
+    margin-top: 70px;
+    height: 70%;
+    width: 100%;
+    margin: 0px 40px;
+    background-color: bisque;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 100px;
+    position: relative;
+    cursor: pointer;
+    transform: scale(0.98);
+    transition: all 0.2s;
+
+    overflow-y: hidden;
+    overflow-x: scroll;
+}
+
+.items>.item {
+    display: flex;
+    min-width: 200px;
+    min-height: 300px;
+    align-items: center;
+    justify-content: center;
+    background-color: thistle;
+    margin: 10px;
+
+}
+
+.items.active {
+    cursor: grabbing;
+    cursor: -webkit-grabbing;
+
+    transform: scale(1);
+    opacity: .5;
+}
