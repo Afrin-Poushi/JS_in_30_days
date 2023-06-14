@@ -1,0 +1,86 @@
+* {
+    margin: 0;
+}
+
+html,
+body {
+    height: 100vh;
+    /* total height and width includes padding, border */
+    box-sizing: border-box;
+    margin: 0;
+    font-family: sans-serif;
+    font-size: 16px;
+    background-color: beige;
+}
+
+.voiceContainer {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: max-content;
+    width: max-content;
+    margin: auto;
+    top: 135px;
+    background-color: lightblue;
+    border-radius: 10px;
+    box-shadow: 10px 10px 17px #87898a;
+}
+
+h2,
+p {
+    text-align: center;
+    padding: 20px;
+}
+
+.txt,
+select,
+form>div {
+    display: block;
+    margin: 0 auto;
+    padding: 5px;
+}
+
+.txt {
+    width: 80%;
+    height: 20%;
+}
+
+select {
+    width: 100%;
+}
+
+.clearfix {
+    clear: both;
+}
+
+/* label {
+    float: left;
+    width: 10%;
+    line-height: 1.5;
+} */
+
+.rate-value,
+.pitch-value {
+    float: right;
+    width: 7%;
+    line-height: 1.5;
+}
+
+#rate,
+#pitch {
+    float: right;
+    width: 80%;
+}
+
+.controls {
+    margin: 10px;
+}
+
+input[type=submit] {
+    display: flex;
+    padding: 7px;
+    margin: auto;
+    margin-top: 3px;
+}

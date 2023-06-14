@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Speech Synthesis</title>
+    <!-- style css -->
+    <link rel="stylesheet" type="text/css" href="index.css">
+
+</head>
+
+<body>
+    <div class="voiceContainer">
+        <h2>Speech Synthesis</h2>
+
+        <p>
+            Enter some text in the input below and press the "play" button to hear it.
+            <br> Change voices using the dropdown menu.
+        </p>
+
+        <form>
+            <label for="text">Enter Text: </label>
+            <input type="text" class="txt" />
+
+            <div class="controls">
+                <label for="rate">Rate</label>
+                <input type="range" min="0.5" max="2" value="1" step="0.1" id="rate" />
+                <div class="rate-value">1</div>
+                <div class="clearfix"></div>
+            </div>
+            <div class="controls">
+                <label for="pitch">Pitch</label>
+                <input type="range" min="0" max="2" value="1" step="0.1" id="pitch" />
+                <div class="pitch-value">1</div>
+                <div class="clearfix"></div>
+            </div>
+            <select></select>
+            <input type="submit" value="Play" class="play">
+        </form>
+    </div>
+
+    <script src="speechSynthesis.js"></script>
+
+</body>
+
+</html>
